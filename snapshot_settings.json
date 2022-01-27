@@ -1,0 +1,47 @@
+{
+  "name": "GnosisDAO",
+  "skin": "gnosis",
+  "about": "GnosisDAO transparently guides decisions on development, support, and governance of its GNO token ecosystem. Start your proposal here: https://forum.gnosis.io",
+  "terms": "ipfs://QmYMwQwmsDPTtt3ncu1CaZXyJgdYD4EMbn86oAxT3AVtye",
+  "github": "gnosis",
+  "symbol": "GNO",
+  "filters": {
+    "minScore": 1,
+    "defaultTab": "all"
+  },
+  "network": "1",
+  "plugins": {
+    "gnosis": {},
+    "safeSnap": {
+      "address": "0x0eBaC21F7f6A6599B5fa5f57Baaa974ADFEC4613"
+    }
+  },
+  "twitter": "gnosispm",
+  "website": "https://gnosis.io",
+  "location": "Ethereum",
+  "strategies": [
+    {
+      "name": "erc20-balance-of",
+      "params": {
+        "symbol": "GNO",
+        "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+        "decimals": 18
+      }
+    },
+    {
+      "name": "delegation",
+      "params": {
+        "symbol": "GNO (delegated)",
+        "strategies": [
+          {
+            "name": "erc20-balance-of",
+            "params": {
+              "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
+              "decimals": 18
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
