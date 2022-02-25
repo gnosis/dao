@@ -10,22 +10,42 @@
     "defaultTab": "all"
   },
   "network": "1",
-  "plugins": {
-    "gnosis": {},
-    "safeSnap": {
-      "address": "0x0eBaC21F7f6A6599B5fa5f57Baaa974ADFEC4613"
-    }
+  "voting": {
+    "type": "basic",
+    "quorum": 75000,
+    "delay": 0,
+    "period": 604800,
+    "hideAbstain": false
   },
-  "twitter": "gnosispm",
+  "plugins": {
+    "safeSnap": {
+      "safes": [
+        {
+          "network": "1",
+          "realityAddress": "???",
+          "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
+        },
+        {
+          "network": "100",
+          "realityAddress": "???",
+          "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
+        }
+      ]
+    },
+    "poap": {}
+  },
+  "twitter": "gnosisdao",
   "website": "https://gnosis.io",
   "location": "Ethereum",
   "strategies": [
     {
-      "name": "erc20-balance-of",
+      "name": "multichain",
       "params": {
-        "symbol": "GNO",
-        "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
-        "decimals": 18
+        "graphs": {
+          "1": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}",
+          "100": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}"
+        },
+        "symbol": "GNO"
       }
     },
     {
@@ -34,10 +54,13 @@
         "symbol": "GNO (delegated)",
         "strategies": [
           {
-            "name": "erc20-balance-of",
+            "name": "multichain",
             "params": {
-              "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
-              "decimals": 18
+              "graphs": {
+                "1": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}",
+                "100": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}"
+              },
+              "symbol": "GNO"
             }
           }
         ]
