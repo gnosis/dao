@@ -3,6 +3,7 @@
   "skin": "gnosis",
   "about": "GnosisDAO transparently guides decisions on development, support, and governance of its GNO token ecosystem. Start your proposal here: https://forum.gnosis.io",
   "terms": "ipfs://QmYMwQwmsDPTtt3ncu1CaZXyJgdYD4EMbn86oAxT3AVtye",
+  "avatar": "ipfs://QmVD5UHMZfvsuXJRdVcbnmrPgsUFjDjpSXAmfdv3W7MN42",
   "github": "gnosis",
   "symbol": "GNO",
   "filters": {
@@ -12,7 +13,6 @@
   "network": "1",
   "voting": {
     "type": "basic",
-    "quorum": 75000,
     "delay": 0,
     "period": 604800,
     "hideAbstain": false
@@ -31,6 +31,11 @@
           "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
         }
       ]
+    },
+    "quorum": {
+      "total": 75000,
+      "strategy": "static",
+      "basicCount": [0, 2]
     },
     "poap": {}
   },
