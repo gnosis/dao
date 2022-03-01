@@ -46,26 +46,42 @@
     {
       "name": "multichain",
       "params": {
-        "graphs": {
-          "1": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}",
-          "100": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}"
-        },
-        "symbol": "GNO"
-      }
-    },
-    {
-      "name": "delegation",
-      "params": {
-        "symbol": "GNO (delegated)",
+        "symbol": "GNO",
         "strategies": [
           {
-            "name": "multichain",
+            "name": "gno-vote-weight",
+            "network": "1",
+            "params": {}
+          },
+          {
+            "name": "delegation",
+            "network": "1",
             "params": {
-              "graphs": {
-                "1": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}",
-                "100": "https://api.thegraph.com/subgraphs/name/{account}/{subgraph}"
-              },
-              "symbol": "GNO"
+              "strategies": [
+                {
+                  "name": "gno-vote-weight",
+                  "network": "1",
+                  "params": {}
+                }
+              ]
+            }
+          },
+          {
+            "name": "gno-vote-weight",
+            "network": "100",
+            "params": {}
+          },
+          {
+            "name": "delegation",
+            "network": "100",
+            "params": {
+              "strategies": [
+                {
+                  "name": "gno-vote-weight",
+                  "network": "1",
+                  "params": {}
+                }
+              ]
             }
           }
         ]
