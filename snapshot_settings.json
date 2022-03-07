@@ -44,45 +44,37 @@
   "location": "Ethereum",
   "strategies": [
     {
-      "name": "multichain",
+      "name": "gno-vote-weight",
+      "network": "1",
+      "params": {}
+    },
+    {
+      "name": "delegation",
+      "network": "1",
       "params": {
-        "symbol": "GNO",
         "strategies": [
           {
             "name": "gno-vote-weight",
             "network": "1",
             "params": {}
-          },
-          {
-            "name": "delegation",
-            "network": "1",
-            "params": {
-              "strategies": [
-                {
-                  "name": "gno-vote-weight",
-                  "network": "1",
-                  "params": {}
-                }
-              ]
-            }
-          },
+          }
+        ]
+      }
+    },
+    {
+      "name": "gno-vote-weight",
+      "network": "100",
+      "params": {}
+    },
+    {
+      "name": "delegation",
+      "network": "100",
+      "params": {
+        "strategies": [
           {
             "name": "gno-vote-weight",
             "network": "100",
             "params": {}
-          },
-          {
-            "name": "delegation",
-            "network": "100",
-            "params": {
-              "strategies": [
-                {
-                  "name": "gno-vote-weight",
-                  "network": "1",
-                  "params": {}
-                }
-              ]
-            }
           }
         ]
       }
