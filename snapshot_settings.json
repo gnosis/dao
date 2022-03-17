@@ -55,6 +55,7 @@
     {
       "name": "delegation",
       "network": "1",
+      "symbol": "GNO",
       "params": {
         "strategies": [
           {
@@ -80,6 +81,7 @@
     {
       "name": "delegation",
       "network": "100",
+      "symbol": "GNO",
       "params": {
         "strategies": [
           {
