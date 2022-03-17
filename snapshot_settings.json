@@ -22,12 +22,12 @@
       "safes": [
         {
           "network": "1",
-          "realityAddress": "???",
+          "realityAddress": "0x0d70332CEB7F3C94b061cda48327891E3449A9E1",
           "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
         },
         {
           "network": "100",
-          "realityAddress": "???",
+          "realityAddress": "0xf1C276217e305D701484fa510A2efaf8A31573fd",
           "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
         }
       ]
@@ -44,9 +44,13 @@
   "location": "Ethereum",
   "strategies": [
     {
-      "name": "gno-vote-weight",
+      "name": "gno",
       "network": "1",
-      "params": {}
+      "params": {
+        "symbol": "GNO",
+        "decimals": 18,
+        "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmfZ5cepEwspcrLLwtA3i5M6qEnv3WKDkpAtC65t8VpY6M"
+      }
     },
     {
       "name": "delegation",
@@ -54,16 +58,24 @@
       "params": {
         "strategies": [
           {
-            "name": "gno-vote-weight",
-            "params": {}
+            "name": "gno",
+            "params": {
+              "symbol": "GNO",
+              "decimals": 18,
+              "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmfZ5cepEwspcrLLwtA3i5M6qEnv3WKDkpAtC65t8VpY6M"
+            }
           }
         ]
       }
     },
     {
-      "name": "gno-vote-weight",
+      "name": "gno",
       "network": "100",
-      "params": {}
+      "params": {
+        "symbol": "GNO",
+        "decimals": 18,
+        "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmaggnWhZKpqudcFgkNVbiu8HCYRPtK11EL2TMeA6S5ZXV"
+      }
     },
     {
       "name": "delegation",
@@ -72,7 +84,11 @@
         "strategies": [
           {
             "name": "gno-vote-weight",
-            "params": {}
+            "params": {
+              "symbol": "GNO",
+              "decimals": 18,
+              "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmaggnWhZKpqudcFgkNVbiu8HCYRPtK11EL2TMeA6S5ZXV"
+            }
           }
         ]
       }
