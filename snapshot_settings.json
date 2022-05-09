@@ -3,6 +3,7 @@
   "skin": "gnosis",
   "about": "GnosisDAO transparently guides decisions on development, support, and governance of its GNO token ecosystem. Start your proposal here: https://forum.gnosis.io",
   "terms": "ipfs://QmYMwQwmsDPTtt3ncu1CaZXyJgdYD4EMbn86oAxT3AVtye",
+  "avatar": "ipfs://QmVD5UHMZfvsuXJRdVcbnmrPgsUFjDjpSXAmfdv3W7MN42",
   "github": "gnosis",
   "symbol": "GNO",
   "filters": {
@@ -10,34 +11,85 @@
     "defaultTab": "all"
   },
   "network": "1",
-  "plugins": {
-    "gnosis": {},
-    "safeSnap": {
-      "address": "0x0eBaC21F7f6A6599B5fa5f57Baaa974ADFEC4613"
-    }
+  "voting": {
+    "type": "basic",
+    "delay": 0,
+    "period": 604800,
+    "hideAbstain": false
   },
-  "twitter": "gnosispm",
+  "plugins": {
+    "safeSnap": {
+      "safes": [
+        {
+          "network": "1",
+          "realityAddress": "0x0d70332CEB7F3C94b061cda48327891E3449A9E1",
+          "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
+        },
+        {
+          "network": "100",
+          "realityAddress": "0xf1C276217e305D701484fa510A2efaf8A31573fd",
+          "multisend": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761"
+        }
+      ]
+    },
+    "quorum": {
+      "total": 75000,
+      "strategy": "static",
+      "basicCount": [0, 2]
+    },
+    "poap": {}
+  },
+  "twitter": "gnosisdao",
   "website": "https://gnosis.io",
   "location": "Ethereum",
   "strategies": [
     {
-      "name": "erc20-balance-of",
+      "name": "gno",
+      "network": "1",
       "params": {
         "symbol": "GNO",
-        "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
-        "decimals": 18
+        "decimals": 18,
+        "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmfZ5cepEwspcrLLwtA3i5M6qEnv3WKDkpAtC65t8VpY6M"
       }
     },
     {
       "name": "delegation",
+      "network": "1",
+      "symbol": "GNO",
       "params": {
-        "symbol": "GNO (delegated)",
         "strategies": [
           {
-            "name": "erc20-balance-of",
+            "name": "gno",
             "params": {
-              "address": "0x6810e776880c02933d47db1b9fc05908e5386b96",
-              "decimals": 18
+              "symbol": "GNO",
+              "decimals": 18,
+              "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmfZ5cepEwspcrLLwtA3i5M6qEnv3WKDkpAtC65t8VpY6M"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "gno",
+      "network": "100",
+      "params": {
+        "symbol": "GNO",
+        "decimals": 18,
+        "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmaggnWhZKpqudcFgkNVbiu8HCYRPtK11EL2TMeA6S5ZXV"
+      }
+    },
+    {
+      "name": "delegation",
+      "network": "100",
+      "symbol": "GNO",
+      "params": {
+        "strategies": [
+          {
+            "name": "gno-vote-weight",
+            "params": {
+              "symbol": "GNO",
+              "decimals": 18,
+              "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmaggnWhZKpqudcFgkNVbiu8HCYRPtK11EL2TMeA6S5ZXV"
             }
           }
         ]
