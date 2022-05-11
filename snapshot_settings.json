@@ -36,8 +36,7 @@
       "total": 75000,
       "strategy": "static",
       "basicCount": [0, 2]
-    },
-    "poap": {}
+    }
   },
   "twitter": "gnosisdao",
   "website": "https://gnosis.io",
