@@ -48,7 +48,7 @@
       "params": {
         "symbol": "GNO",
         "decimals": 18,
-        "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmfZ5cepEwspcrLLwtA3i5M6qEnv3WKDkpAtC65t8VpY6M"
+        "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmYNFPz2j1S8wdm2nhou6wRhGXfVVFzVi37LKuvcHBayip"
       }
     },
     {
@@ -88,7 +88,7 @@
             "params": {
               "symbol": "GNO",
               "decimals": 18,
-              "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmYNFPz2j1S8wdm2nhou6wRhGXfVVFzVi37LKuvcHBayip"
+              "SUBGRAPH_URL": "https://api.thegraph.com/subgraphs/id/QmduKVUHCPjR5tmNEgooXHBMGKqDJWrUPdp6dEMeJM6Kqa"
             }
           }
         ]
