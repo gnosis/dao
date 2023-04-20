@@ -17,6 +17,12 @@
     "period": 604800,
     "hideAbstain": false
   },
+  "moderators": [
+    "0xd714Dd60e22BbB1cbAFD0e40dE5Cfa7bBDD3F3C8",
+    "0x6d9ABa400a2a487a5Fb76c6d56518835553CD284",
+    "0xf19d3e30392359440597ffE1d783ab77aebb2b4D",
+    "0x8e32Cf520548BFC7a15799BB73EcC4B61F285626"
+  ],
   "plugins": {
     "safeSnap": {
       "safes": [
